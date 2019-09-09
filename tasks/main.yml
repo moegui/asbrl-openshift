@@ -9,7 +9,7 @@
     unarchive:
       src: /tmp/openshift-origin-server-v3.10.0-dd10d17-linux-64bit.tar.gz
       dest: /opt
-      remote_src: true
+      remote_src: yes
 
   - name: Create symbolic links
     file:
