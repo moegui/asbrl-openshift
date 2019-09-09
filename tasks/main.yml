@@ -38,7 +38,7 @@
     template:
       src: openshift.service.j2
       dest: /etc/systemd/system/openshift.service   
-      remote_src: true
+      remote_src: no
     
   - name: Enable Openshift Service
     systemd:
