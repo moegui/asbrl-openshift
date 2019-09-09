@@ -39,11 +39,6 @@
       dest: /etc/systemd/system/openshift.service   
       remote_src: true
     
-  # - name: Install Openshift Service
-  #   copy:
-  #     src: /tmp/openshift.service
-  #     dest: /etc/systemd/system/openshift.service
-
   - name: Enable Openshift Service
     systemd:
       daemon_reload: true
