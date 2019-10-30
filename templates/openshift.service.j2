@@ -1,16 +1,16 @@
 [Unit]
-Description=OpenShift oc cluster up Service
+Description=OpenShift Service
 After=docker.service
 Requires=docker.service
 
 [Service]
-ExecStart=/usr/local/bin/oc cluster up --loglevel=1 --public-hostname={{OC_HOSTNAME}}
+ExecStart=/usr/local/bin/oc cluster up --loglevel=1 --public-hostname={{ oc_hostname }}
 ExecStop=/usr/local/bin/oc cluster down
 WorkingDirectory=/var/lib/openshift
 Restart=no
 StandardOutput=syslog
 StandardError=syslog
-SyslogIdentifier=occlusterup
+SyslogIdentifier=openshift
 User=root
 Type=oneshot
 RemainAfterExit=yes

@@ -46,7 +46,7 @@
       name: openshift.service
       enabled: true
       state: started
-      # no_block: true
+      no_block: false
 
   - name: Set admin as administrator
     command: /usr/local/bin/oc --config /var/lib/openshift/openshift.local.clusterup/openshift-apiserver/admin.kubeconfig adm policy add-cluster-role-to-user cluster-admin admin
